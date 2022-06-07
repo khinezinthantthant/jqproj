@@ -157,8 +157,25 @@
 			// 	$(".box:nth-child(2n)").css("background-color","grey");
 			// });
 
-			$(".square1").click(function(){
-				$(".box:nth-child(2n+1)").css("background-color","grey");
+			// $(".square1").click(function(){
+			// 	$(".box:nth-child(2n+1)").css("background-color","grey");
+			// });
+
+
+			// $(".container").click(function(){
+			// 	$(this).next().css({
+			// 		"background-color":"red",
+			// 		"color":"#fff"
+			// 	});
+			// });
+
+
+			$(".container").click(function(){
+				$(this).prev().css({
+					"background-color":"green",
+					"color":"#fff",
+					"padding":"20px"
+				});
 			});
 
 		});
