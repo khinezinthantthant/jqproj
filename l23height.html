@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>width Method</title>
+	<title>height Method</title>
 	<style type="text/css">
 		body{
 			padding: 0;
 			margin: 0;
 		}
-
+		.container{
+			display: flex;
+		}
 		.box1{
 			width: 100px;
-			height: 80px;
+			height: 100px;
 
-			margin: 5px;/*no action*/
-			padding: 10px;
+			/*margin: 5px;*//*no action*/
+			padding: 10px;/*action on innerHeight & outerHeight*/
+
+
+			border: 2px solid #000;
 		}
 		.box2{
-			width: 200px;
-			height: 80px;
+			width: 100px;
+			height: 200px;
 		}
 		.box3{
-			width: 300px;
-			height: 80px;
+			width: 100px;
+			height: 300px;
 		}
 		.box4{
-			width: 400px;
-			height: 80px;
+			width: 100px;
+			height: 400px;
 		}
 		.box5{
-			width: 500px;
-			height: 80px;
-		}
-		.text-center{
-			text-align: center;
+			width: 100px;
+			height: 500px;
 		}
 	</style>
 </head>
@@ -51,38 +53,24 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
-			// console.log("hi");
+			// console.log('hi');
 
 			$(".box1").click(function(){
-				console.log("Box 1 Width = " + $(this).width());
-
-				console.log("Box 1 Inner Width = " + $(this).innerWidth());
-
-				console.log("Box 1 Outer Width = " + $(this).outerWidth());
+				console.log("Box 1 Height = "+$(this).height());
+				console.log("Box 1 Height = "+$(this).innerHeight());
+				console.log("Box 1 Height = "+$(this).outerHeight());
 			});
-
-
 			$(".box2").click(function(){
-				console.log("Box 2 Width = " + $(this).width());
+				console.log("Box 2 Height = "+$(this).height());
 			});
-
-
 			$(".box3").click(function(){
-				console.log("Box 3 Width = " + $(this).width());
+				console.log("Box 3 Height = "+$(this).height());
 			});
-
-
 			$(".box4").click(function(){
-				console.log("Box 4 Width = " + $(this).width());
+				console.log("Box 4 Height = "+$(this).height());
 			});
-
-
-			var cuswidth = 1000;
 			$(".box5").click(function(){
-				console.log("Box 5 Width = " + $(this).width());
-				// $(this).width(cuswidth);
-				$(this).width(cuswidth).addClass("text-center");
-				console.log("Box 5 Width = " + $(this).width());
+				console.log("Box 5 Height = "+$(this).height());
 			});
 		});
 	</script>
