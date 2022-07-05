@@ -20,7 +20,18 @@
 		$(document).ready(function(){
 			console.log('hi');
 
-			$('button').click(fun)
+			$('button').click(function(){
+				// console.log('hay');
+
+				// css(property,value)
+				$("h1").css("background-color","red");
+				$("h2").css("background-color","green");
+				$("h3").css({
+					"background-color":"blue",
+					"font-family":"Arial",
+					"color":"white"
+				});
+			});
 
 		});
 	</script>
