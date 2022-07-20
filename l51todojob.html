@@ -37,7 +37,7 @@
 		<form action="" method="">
 			<div class="form-group">
 				<label for="todojob">Todo Job</label>
-				<input type="text" name="todojob" id="todojob" class="form-control" />
+				<input type="text" name="todojob" id="todojob" class="form-control" placeholder="Enter something" />
 			</div>
 
 
@@ -49,7 +49,7 @@
 			</div>
 
 			<div class="form-group">
-				<button type="submit">Add New Job</button>
+				<button type="submit" disabled>Add New Job</button>
 			</div>
 		</form>
 	</div>
@@ -61,6 +61,20 @@
 	<script type="text/javascript">
 		$(document).ready(function(e){
 			// console.log('hi');
+
+
+			var phfortodojob = "Enter your new job";
+
+			$("#todojob").val(phfortodojob).focusin(function(){
+				$(this).val("");
+			}).focusout(function(){
+				if($.trim($(this).val()) !== ""){
+					$('[type=submit]').removeAttr('disabled');
+				}else{
+					$('[type=submit]').attr('disabled',true);
+				}
+			});
+
 
 
 			$("form").submit(function(e){
